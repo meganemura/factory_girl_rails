@@ -4,6 +4,7 @@ require 'cucumber/rake/task'
 
 Cucumber::Rake::Task.new(:cucumber) do |t|
   t.fork = true
+  ENV['CUCUMBER_FORMAT'] = 'pretty'
   t.cucumber_opts = ['--format', (ENV['CUCUMBER_FORMAT'] || 'progress')]
 end
 
